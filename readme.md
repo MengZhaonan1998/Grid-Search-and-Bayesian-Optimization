@@ -1,25 +1,40 @@
---------------------------------------------------------------Readme----------------------------------------------------------------------
-Welcome to our second project of <linear algebra and optimization for machine learning>!
-This project is contributed by Zuhair, Alvedian Mauditra Aulia Ma, and Zhaonan Meng.
+# Grid Search and Bayesian Optimization
 
------------------------------------------------------------------------
-Under the directory 'project 2', you can find following files:     
-1. GridSearch.py 					     
-2. start_bayesian_opt.py				     
-3. GD_BO.py					     
-4. MBFGS_BO.py					     
-5. optimization.py					     
-6. heart.csv			
------------------------------------------------------------------------		     
------------------------------------------------------------------------
+This project is contributed by Zhaonan Meng, Alvedian Mauditra Aulia Matin, and Zuhair
 
-To access the results of the first part, please directly run GridSearch.py:
+## Description
 
-	The file GridSearch.py is a python script for the grid search (GS) part of the project.
-	You can run the python file and input or choose the given options.
-	You need to specify (choose) the number of grid points, the grid type, the scale type, and the method of processing.
-	The outputs are the best performance and the corresponding C and gamma, 
-	computational time and a 3D plot of the five-fold cross-validation accuracy (performance).
+This project is the homework of the TU Delft course 'Linear Algebra and Optimization for Machine Learning.' In this project, we studied two methods for hyperparameter tuning: grid search and Bayesian optimization. We implemented both approaches and applied them to tune the hyperparameters (kernel size and regularization) of a support vector machine. Further outcomes of the project can be found in the PDF file 'project2_BayesianOptSVM.pdf' in this repository.
+
+## Getting Started
+
+### Hierarchy
+* GridSearch.py
+* start_bayesian_opt.py
+* GD_BO.py
+* MBFGS_BO.py
+* optimization.py
+* heart.csv
+
+### Dependencies
+
+To run the program you need to make sure that you have installed the Python package below:
+* os
+* sys
+* tqdm
+* multiprocessing 
+* numpy
+* scipy
+* pandas
+* sklearn
+* matplotlib
+* time
+* csv
+
+### Executing program
+
+#### To access the results of the first part (grid search), please directly run GridSearch.py:
+The file GridSearch.py is a python script for the grid search (GS) part of the project. You can run the python file and input or choose the given options. You need to specify (choose) the number of grid points, the grid type, the scale type, and the method of processing. The outputs are the best performance and the corresponding C and gamma, computational time and a 3D plot of the five-fold cross-validation accuracy (performance).
 
 	Based on our experiment and the result of the grid search, we choose the following parameters:
 	number of grid points for each parameter: 100 (total 100x100 grid points) (input 100)
@@ -28,11 +43,10 @@ To access the results of the first part, please directly run GridSearch.py:
 	method of processing: multiprocessing (option 1)
 	On our computer, the computational time is about 3.5 minutes.
 
-------------------------------------------------------------------------
-
-To access the results of the second part, please directly run start_bayesian_opt.py:
-
-	start_bayesian_opt.py: 
+#### To access the results of the second part (Bayesian optimization), please directly run start_bayesian_opt.py:
+The file start_bayesian_opt.py is a python script for the Bayesian optimization (BO) part of the project.
+	
+ 	start_bayesian_opt.py: 
 	an interface which displays all results reported.
 	start_bayesian_opt.py depends on GD_BO.py, MBFGS_BO.py, optimization.py and heart.csv. So please make sure all files are under the same directory.		
 	You can input 1, 2, 3, or 4 to access results of BO equipped with different acquisition functions and optimization algorithms.
@@ -51,5 +65,3 @@ To access the results of the second part, please directly run start_bayesian_opt
 
 	optimization.py:
 	A toolkit containing different optimization algorithms such as GD and BFGS	
-
-
